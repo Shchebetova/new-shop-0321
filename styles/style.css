@@ -412,3 +412,124 @@ body {
 .socials__image {
     padding-top: 25%;
 }
+
+/*registration*/
+
+.top-wrapper {
+    background:  #F8F3F4;
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.top-wrapper__title {
+    font-size: 24px;
+    line-height: 148px;
+    color: #F16D7F;
+    text-transform: uppercase;
+}
+
+.registration {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration__form {
+    padding-right: 128px;
+}
+
+.registration__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+}
+
+.registration__input {
+    margin-top: 21px;
+}
+
+.input__form {
+    width: 326px;
+    height: 15px;
+    border: 1px solid #A4A4A4;
+    padding: 15px 17px;
+    color: #000;
+}
+
+.input__form::placeholder {
+    color: #B1B1B1;
+}
+
+.registration__radio {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+input[type="radio"] {
+    width: 17px;
+    height: 17px;
+}
+
+.registration__label {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+
+.registration__text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin-top: 15px;
+    margin-bottom: 39px;
+    width: 360px;
+}
+
+.regisration__button {
+    margin-left: 0;
+}
+
+.regisration__button::after {
+    content: url(../img/arrow.svg);
+    padding-left: 20px;
+    fill: #F16D7F;
+    color: #F16D7F;;
+}
+
+.loyalty__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding-bottom: 22px;
+    text-transform: uppercase;
+}
+
+.loyalty__text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding-bottom: 21px;
+}
+
+.loyalty__item {
+    padding-bottom: 16px;
+    padding-left: 22px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
