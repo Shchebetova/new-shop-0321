@@ -1,0 +1,26 @@
+.button {
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    border: 1px solid #FF6A6A;
+    background-color: transparent;
+    padding: 14px 39px ;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &__arrow {
+        padding-left: 20px;
+        fill: #F16D7F;
+    }
+
+    &:hover {
+        background-color: #F26376;
+        color: #ffffff;
+    }
+
+    &:hover .button__arrow {
+        fill: #ffffff;
+    }
+}
