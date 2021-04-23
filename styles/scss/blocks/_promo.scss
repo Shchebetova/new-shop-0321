@@ -1,0 +1,82 @@
+.promo {
+    height: 764px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: url(../../img/main-img.png);
+    background-repeat: no-repeat;
+    background-color: #F1E4E6;
+    // background-position-x: -25%;
+
+    &__slogan {
+        padding-top: 290px;
+        padding-left: calc(50% + 60px);
+    }
+    
+    &__heading {
+        padding-left: 16px;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 38px;
+        text-transform: uppercase;
+        border-left: 12px solid #F16D7F;
+    }
+    
+    &__heading--great {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        color: #222222;
+    }
+    
+    &__heading--colored {
+        color: #F16D7F;
+    }
+}
+
+@media (max-width: 1140px) {
+    .promo {
+        height: 368px;
+        background-size: contain;
+
+        &__slogan {
+            padding-top: 15%;
+        }
+
+        &__heading {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &__heading--great {
+            font-size: 44px;
+            line-height: 53px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .promo {
+        background-image: none;
+        position: relative;
+
+        &__slogan {
+            padding-top: 0;
+            padding-left: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: fit-content;
+        }
+
+        &__heading {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__heading--great {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}

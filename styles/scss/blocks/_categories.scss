@@ -1,0 +1,76 @@
+.categories {
+    margin-top: 65px;
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1140px;
+    }
+    
+    &__item {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 31%;
+        min-height: 260px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &--women {
+            background-image: url(../../img/women.jpg);
+        }
+
+        &--men {
+            background-image: url(../../img/men.jpg);
+        }
+
+        &--kids {
+            background-image: url(../../img/kids.jpg);
+        }
+
+        &--accessories {
+            background-image: url(../../img/accessories.jpg);
+            width: 100%;
+            min-height: 180px;
+        }
+    }
+    
+    
+    &__link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    
+    &__text {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+    
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #F16D7F;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories {
+        &__block {
+            display: block;
+        }
+
+        &__item {
+            width: 100%;
+            background-size: cover;
+        }
+    }
+}
