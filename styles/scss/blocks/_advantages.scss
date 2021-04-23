@@ -1,7 +1,7 @@
 .advantages {
     background: #222224;
-    width: 1600px;
-    height: 341px;
+    max-width: 1600px;
+    min-height: 341px;
     margin: 96px auto 0;
 
     &__list {
@@ -33,6 +33,20 @@
         text-align: center;
         color: #FBFBFB;
         padding-top: 16px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .advantages {
+        padding-bottom: 64px;
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__image {
+            padding-top: 30px;
+        }
     }
 }
 

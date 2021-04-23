@@ -59,6 +59,7 @@
         font-size: 16px;
         line-height: 19px;
         color: #F16D7F;
+        padding-bottom: 20px;
     }
     
     &__hidden-cart {
@@ -66,3 +67,28 @@
     }
 }
 
+@media (max-width: 1140px) {
+    .products {
+        &__card {
+            width: calc(50% - 16px);
+            height: auto;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .products {
+        &__cards {
+            flex-direction: column;
+        }
+
+        &__card {
+            width: 100%;
+        }
+    }
+}

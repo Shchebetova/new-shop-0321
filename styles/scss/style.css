@@ -74,11 +74,12 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1140px;
+  padding: 0 16px;
 }
 
 .header {
   background: #222222;
-  width: 1600px;
+  max-width: 1600px;
   position: relative;
   margin: 0 auto;
 }
@@ -125,9 +126,21 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 1140px) {
+  .header {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
+
 .promo {
   height: 764px;
-  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
   background-image: url(../../img/main-img.png);
   background-repeat: no-repeat;
@@ -136,7 +149,7 @@ body {
 
 .promo__slogan {
   padding-top: 290px;
-  padding-left: 738px;
+  padding-left: calc(50% + 60px);
 }
 
 .promo__heading {
@@ -159,6 +172,48 @@ body {
   color: #F16D7F;
 }
 
+@media (max-width: 1140px) {
+  .promo {
+    height: 368px;
+    background-size: contain;
+  }
+  .promo__slogan {
+    padding-top: 15%;
+  }
+  .promo__heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .promo__heading--great {
+    font-size: 44px;
+    line-height: 53px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo {
+    background-image: none;
+    position: relative;
+  }
+  .promo__slogan {
+    padding-top: 0;
+    padding-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+  }
+  .promo__heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .promo__heading--great {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+
 .categories {
   margin-top: 65px;
 }
@@ -167,39 +222,42 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 1140px;
+  max-width: 1140px;
 }
 
 .categories__item {
   background-repeat: no-repeat;
-  width: 360px;
-  height: 260px;
+  background-size: contain;
+  width: 31%;
+  min-height: 260px;
   margin-bottom: 30px;
+  position: relative;
 }
 
-.categories__item:first-child {
+.categories__item--women {
   background-image: url(../../img/women.jpg);
 }
 
-.categories__item:nth-child(2) {
+.categories__item--men {
   background-image: url(../../img/men.jpg);
 }
 
-.categories__item:nth-child(3) {
+.categories__item--kids {
   background-image: url(../../img/kids.jpg);
 }
 
-.categories__item:last-child {
+.categories__item--accessories {
   background-image: url(../../img/accessories.jpg);
   width: 100%;
-  height: 180px;
+  min-height: 180px;
 }
 
 .categories__link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .categories__text {
@@ -217,6 +275,16 @@ body {
   color: #F16D7F;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .categories__block {
+    display: block;
+  }
+  .categories__item {
+    width: 100%;
+    background-size: cover;
+  }
 }
 
 .products {
@@ -281,16 +349,36 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #F16D7F;
+  padding-bottom: 20px;
 }
 
 .products__hidden-cart {
   display: none;
 }
 
+@media (max-width: 1140px) {
+  .products__card {
+    width: calc(50% - 16px);
+    height: auto;
+  }
+  .products__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products__cards {
+    flex-direction: column;
+  }
+  .products__card {
+    width: 100%;
+  }
+}
+
 .advantages {
   background: #222224;
-  width: 1600px;
-  height: 341px;
+  max-width: 1600px;
+  min-height: 341px;
   margin: 96px auto 0;
 }
 
@@ -325,12 +413,26 @@ body {
   padding-top: 16px;
 }
 
+@media (max-width: 1140px) {
+  .advantages {
+    padding-bottom: 64px;
+  }
+  .advantages__list {
+    flex-direction: column;
+  }
+  .advantages__image {
+    padding-top: 30px;
+  }
+}
+
 .subscribe {
-  width: 1600px;
-  height: 448px;
+  max-width: 1600px;
+  min-height: 448px;
   margin: 0 auto;
   background-image: url(../../img/footer-background.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 25%;
 }
 
 .subscribe__wrapper {
@@ -419,7 +521,7 @@ body {
 }
 
 .copyright {
-  width: 1600px;
+  max-width: 1600px;
   height: 79px;
   margin: 0 auto;
   background: #222224;
@@ -467,6 +569,29 @@ body {
 
 .socials__item:hover .socials__image {
   fill: #FFFFFF;
+}
+
+@media (max-width: 1140px) {
+  .subscribe {
+    padding-bottom: 140px;
+  }
+  .subscribe__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe__heading {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .copyright {
+    height: 81px;
+    padding: 43px 0 9px;
+  }
+  .copyright__wrapper {
+    flex-direction: column-reverse;
+  }
 }
 
 .button {
